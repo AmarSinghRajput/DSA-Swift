@@ -24,4 +24,11 @@ struct TwoSumSortedTests {
     
     #expect(result == nil)
   }
+  
+  @Test
+  func withOneElementOnly() {
+    let result = TwoSumSorted.solve([10], target: 10)
+    
+    #expect(result == nil)
+  }
 }
