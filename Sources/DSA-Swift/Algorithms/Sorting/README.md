@@ -101,3 +101,59 @@ Swap
 Array is sorted.
 
 ---
+# Insertion Sort
+
+### Core Idea
+
+Build the sorted array one element at a time by picking the next item from the unsorted portion and "inserting" it into its correct position within the already sorted portion.
+
+After every pass:
+
+The sorted portion (on the left) grows by one.
+
+All elements to the right of the current "target" that are larger than it are shifted one position to the right to make a hole.
+
+### Intuition Example
+
+Input:
+[5, 3, 8, 4, 2]
+
+Pass 1 (Target: 3)
+
+Compare 3 with 5.
+
+5 is larger, so shift 5 right.
+
+Insert 3 at the start.
+[3, 5, 8, 4, 2]
+
+Pass 2 (Target: 8)
+
+Compare 8 with 5.
+
+8 is already larger; no shift needed.
+[3, 5, 8, 4, 2]
+
+Pass 3 (Target: 4)
+
+Compare 4 with 8 → Shift 8 right.
+
+Compare 4 with 5 → Shift 5 right.
+
+Compare 4 with 3 → 3 is smaller; stop.
+
+Insert 4.
+[3, 4, 5, 8, 2]
+
+Pass 4 (Target: 2)
+
+Compare 2 with 8, 5, 4, and 3.
+
+All are larger; shift all of them right.
+
+Insert 2 at the beginning.
+[2, 3, 4, 5, 8]
+
+Array is sorted.
+
+---
