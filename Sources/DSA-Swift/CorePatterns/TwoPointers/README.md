@@ -75,3 +75,18 @@ Space: O(1)
 
 ---
 
+## Given an integer array nums, move all 0s to the end of the array while maintaining the relative order of the non-zero elements.
+
+###The operation must be done in-place, meaning you cannot create another array for storing the result.
+
+Example 1
+Input: nums = [0,1,0,3,12]
+Output: [1,3,12,0,0]
+
+Example 2
+Input: nums = [0,0,1]
+Output: [1,0,0]
+
+Constraints
+1 ≤ nums.length ≤ 10⁴
+-2³¹ ≤ nums[i] ≤ 2³¹ - 1
