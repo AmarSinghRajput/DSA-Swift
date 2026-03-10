@@ -90,3 +90,40 @@ Output: [1,0,0]
 Constraints
 1 ≤ nums.length ≤ 10⁴
 -2³¹ ≤ nums[i] ≤ 2³¹ - 1
+
+## Container With Most Water – Problem Statement
+
+###You are given an array height of n non-negative integers. Each element represents the height of a vertical line drawn at that index.
+
+###Find two lines such that together with the x-axis they form a container that can hold the maximum amount of water.
+
+###Return the maximum amount of water the container can store.
+
+###Rules
+
+The container is formed by choosing two different indices i and j.
+The amount of water the container can hold is determined by:
+
+area = min(height[i], height[j]) * (j - i)
+
+min(height[i], height[j]) represents the limiting height of the water.
+
+(j - i) represents the width (distance between the two lines).
+
+Example
+Input: height = [1,8,6,2,5,4,8,3,7]
+
+Output: 49
+Explanation:
+Choose the lines at index 1 and 8:
+height[1] = 8
+height[8] = 7
+width = 8 - 1 = 7
+
+area = min(8,7) * 7 = 49
+
+
+The container formed by these two lines holds the maximum possible water (49).
+
+# The idea is to find shorter height and move it inwards then calc area, campare it with stored max pair values.
+---
