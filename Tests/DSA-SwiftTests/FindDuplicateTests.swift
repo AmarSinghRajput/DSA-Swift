@@ -1,33 +1,32 @@
-import Testing
 @testable import DSA_Swift
+import Testing
 
 struct FindDuplicateTests {
-  
   @Test
-  func basicCase() {
-    let result = FindDuplicate.find([1,23,4,6,8,2,9,0,1,32,56,74,12,41])
-    
+  func `basic case`() {
+    let result = FindDuplicate.find([1, 23, 4, 6, 8, 2, 9, 0, 1, 32, 56, 74, 12, 41])
+
     #expect(result == true)
   }
-  
+
   @Test
-  func emptyCase() {
+  func `empty case`() {
     let result = FindDuplicate.find([])
-    
+
     #expect(result == false)
   }
-  
+
   @Test
-  func find2Method_shouldReturnTrueWithoutDuplicates() {
-    let result = FindDuplicate.find2([1,23,4,6,8,2,9,0,1,32,56,74,12,41])
-    
+  func `find2 method should return true without duplicates`() {
+    let result = FindDuplicate.find2([1, 23, 4, 6, 8, 2, 9, 0, 1, 32, 56, 74, 12, 41])
+
     #expect(result == true)
   }
-  
+
   @Test
-  func find2Method_shouldReturnFalseWithoutDuplicates() {
-    let result = FindDuplicate.find2([1,23,4,6,8,2,9,0,32,56,74,12,41])
-    
+  func `find2 method should return false without duplicates`() {
+    let result = FindDuplicate.find2([1, 23, 4, 6, 8, 2, 9, 0, 32, 56, 74, 12, 41])
+
     #expect(result == false)
   }
 }

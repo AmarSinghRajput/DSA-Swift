@@ -1,34 +1,33 @@
-import Testing
 @testable import DSA_Swift
+import Testing
 
 struct TwoSumSortedTests {
-  
   @Test
-  func basicCase() {
-    let result = TwoSumSorted.solve([1,2,3,4,5,6,7,8], target: 12)
-    
+  func `basic case`() {
+    let result = TwoSumSorted.solve([1, 2, 3, 4, 5, 6, 7, 8], target: 12)
+
     #expect(result != nil)
-    #expect(result! == (3,7))
+    #expect(result == (3, 7))
   }
-  
+
   @Test
-  func noSolution() {
-    let result = TwoSumSorted.solve([1,2,3,4,5,6,7,8], target: 100)
-    
+  func `no solution`() {
+    let result = TwoSumSorted.solve([1, 2, 3, 4, 5, 6, 7, 8], target: 100)
+
     #expect(result == nil)
   }
-  
+
   @Test
-  func emptyArray() {
+  func `empty array`() {
     let result = TwoSumSorted.solve([], target: 10)
-    
+
     #expect(result == nil)
   }
-  
+
   @Test
-  func withOneElementOnly() {
+  func `with one element only`() {
     let result = TwoSumSorted.solve([10], target: 10)
-    
+
     #expect(result == nil)
   }
 }
