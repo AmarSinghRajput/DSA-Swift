@@ -2,131 +2,166 @@
 
 Structured DSA preparation focused on pattern recognition and interview-level problem solving (Swift).
 
-# Repository Structure
+## Repository Structure
 
 ```
 DSA-Swift/
 │
 ├── README.md
 │
+├── Data-Structures/
+│   ├── Array/
+│   ├── Linked-List/
+│   ├── Stack/
+│   ├── Queue/
+│   ├── Heap/
+│   ├── Tree/
+│   ├── Graph/
+│   └── HashMap/
+│
 ├── Algorithms/
-│   ├── Dynamic Programming/
+│   ├── Sorting/
+│   │   ├── BubbleSort/
+│   │   ├── SelectionSort/
+│   │   ├── InsertionSort/
+│   │   ├── MergeSort/
+│   │   └── QuickSort/
+│   │
+│   ├── Searching/
+│   │   └── BinarySearch/
 │   │
 │   ├── Greedy/
 │   │
-│   └── Sorting/
-│       
+│   └── DynamicProgramming/
 │
-├── Core Patterns/
-│   ├── Array/
-│   │
+├── Problem-Patterns/
+│   ├── SlidingWindow/
+│   ├── TwoPointers/
 │   ├── Backtracking/
-│   │
-│   ├── Binary Search/
-│   │
 │   ├── Recursion/
-│   │
-│   ├── Sliding Window/
-│   │
-│   └── Two Pointers/
+│   ├── FastSlowPointers/
+│   ├── PrefixSum/
+│   └── MonotonicStack/
 │
-│
-├── Data Structure/
-│   ├── Graph/
-│   │
-│   ├── Heap/
-│   │
-│   ├── Linked List/
-│   │
-│   ├── Stack/
-│   │
-│   ├── Queue/
-│   │
-│   └── Tree/
-│
-│
-└── Interview Simulators/
-    
+└── Interview-Problems/
+    ├── Easy/
+    ├── Medium/
+    └── Hard/
 ```
 
 ---
 
-# Philosophy
+## Philosophy
 
-This repo is divided into four layers:
+This repository is organized into **four strategic layers** for optimal learning and interview preparation:
 
-### 1. Algorithms
+### 1. **Data Structures**
+Foundational building blocks with implementations and use cases:
+- Arrays, Linked Lists, Stacks, Queues, Heaps, Trees, Graphs, HashMaps
 
-Pure algorithmic strategies (DP, Greedy, Sorting).
+### 2. **Algorithms**
+Core algorithmic techniques:
+- **Sorting**: BubbleSort, SelectionSort, MergeSort, QuickSort
+- **Searching**: BinarySearch
+- **Greedy**: Greedy strategies and optimization
+- **Dynamic Programming**: Optimal substructure and memoization
 
-### 2. Core Patterns
+### 3. **Problem Patterns**
+Reusable problem-solving techniques applied across multiple problems:
+- **Sliding Window**: Efficient range/subarray problems
+- **Two Pointers**: Array/string manipulation
+- **Backtracking**: Combinatorial and constraint-based problems
+- **Recursion**: Divide-and-conquer approaches
+- **Fast-Slow Pointers**: Cycle detection and list manipulation
+- **Prefix Sum**: Range queries and cumulative operations
+- **Monotonic Stack**: Next/previous element problems
 
-Reusable problem-solving patterns (Two Pointers, Sliding Window, etc.).
-
-### 3. Data Structures
-
-Implementation + problem application.
-
-### 4. Interview Simulators
-
-Timed practice and real interview-style problem sets.
-
----
-
-# Topics Overview
-
-## Algorithms
-
-| Topic               | Link                                                                   | Status      |
-| ------------------- | ---------------------------------------------------------------------- | ----------- |
-| Dynamic Programming | [Open](./Sources/DSA-Swift/Algorithms/DynamicProgramming/README.md)    | Not Started |
-| Greedy              | [Open](./Sources/DSA-Swift/Algorithms/Greedy/README.md)                | Not Started |
-| Sorting             | [Open](./Sources/DSA-Swift/Algorithms/Sorting/README.md)               | Not Started |
-
-## Core Patterns
-
-| Topic          | Link                                                                   | Status      |
-| -------------- | ---------------------------------------------------------------------- | ----------- |
-| Array          | [Open](./Sources/DSA-Swift/CorePatterns/Arrays/README.md)              | Not Started |
-| Backtracking   | [Open](./Sources/DSA-Swift/CorePatterns/Backtracking/README.md)        | Not Started |
-| Binary Search  | [Open](./Sources/DSA-Swift/CorePatterns/BinarySearch/README.md)        | Not Started |
-| Recursion      | [Open](./Sources/DSA-Swift/CorePatterns/Recursion/README.md)           | Not Started |
-| Sliding Window | [Open](./Sources/DSA-Swift/CorePatterns/SlidingWindow/README.md)       | Not Started |
-| Two Pointers   | [Open](./Sources/DSA-Swift/CorePatterns/TwoPointers/README.md)         | Ongoing     |
-
-## Data Structures
-
-| Topic       | Link                                                                 | Status      |
-| ----------- | -------------------------------------------------------------------- | ----------- |
-| Graph       | [Open](./Sources/DSA-Swift/DataStructures/Graphs/README.md)          | Not Started |
-| Heap        | [Open](./Sources/DSA-Swift/DataStructures/Heaps/README.md)           | Not Started |
-| Linked List | [Open](./Sources/DSA-Swift/DataStructures/LinkedList/README.md)      | Not Started |
-| Stack       | [Open](./Sources/DSA-Swift/DataStructures/Stack/README.md)           | Not Started |
-| Queue       | [Open](./Sources/DSA-Swift/DataStructures/Queue/README.md)           | Not Started |
-| Tree        | [Open](./Sources/DSA-Swift/DataStructures/Trees/README.md)           | Not Started |
-
-## Interview Simulators
-
-| Section               | Link                                                         | Status      |
-| --------------------- | ------------------------------------------------------------ | ----------- |
-| Timed Mock Interviews | [Open](./Sources/DSA-Swift/InterviewSimulations/README.md)   | Not Started |
-
+### 4. **Interview Problems**
+Real interview-style problems categorized by difficulty:
+- **Easy**: Foundational concepts
+- **Medium**: Pattern application
+- **Hard**: Complex multi-pattern problems
 
 ---
 
-# Strategy
+## Topics Overview
 
-1. Master core pattern.
-2. Solve representative problems.
-3. Re-solve under time constraint.
-4. Simulate interview.
-5. Move forward only after fluency.
+### Data Structures
+
+| Topic       | Status      | Key Topics                           |
+| ----------- | ----------- | ------------------------------------ |
+| Array       | Not Started | Dynamic arrays, indexing             |
+| Linked List | Not Started | Singly/Doubly linked lists           |
+| Stack       | Not Started | LIFO, expression evaluation          |
+| Queue       | Not Started | FIFO, BFS, sliding window            |
+| Heap        | Not Started | Min/Max heaps, priority queues       |
+| Tree        | Not Started | BST, traversals, balanced trees      |
+| Graph       | Not Started | DFS, BFS, shortest path              |
+| HashMap     | Not Started | Hash tables, collision handling      |
+
+### Algorithms
+
+#### Sorting
+
+| Algorithm      | Time      | Space | Status      | Folder                              |
+| -------------- | --------- | ----- | ----------- | ----------------------------------- |
+| Bubble Sort    | O(n²)     | O(1)  | ✅ Done     | `Algorithms/Sorting/BubbleSort/`    |
+| Selection Sort | O(n²)     | O(1)  | ✅ Done     | `Algorithms/Sorting/SelectionSort/` |
+| Insertion Sort | O(n²)     | O(1)  | ✅ Done     | `Algorithms/Sorting/InsertionSort/` |
+| Merge Sort     | O(n log n)| O(n)  | Not Started | `Algorithms/Sorting/MergeSort/`     |
+| Quick Sort     | O(n log n)| O(log n)| Not Started | `Algorithms/Sorting/QuickSort/`   |
+
+#### Searching
+
+| Algorithm     | Time      | Space | Status      | Location                       |
+| ------------- | --------- | ----- | ----------- | ------------------------------ |
+| Binary Search | O(log n)  | O(1)  | ✅ Done     | `Algorithms/Searching/`        |
+
+#### Other Algorithms
+
+| Type                | Status      | Folder                           |
+| ------------------- | ----------- | -------------------------------- |
+| Greedy              | Not Started | `Algorithms/Greedy/`             |
+| Dynamic Programming | Not Started | `Algorithms/DynamicProgramming/` |
+
+### Problem Patterns
+
+| Pattern            | Status      | Location                                |
+| ------------------ | ----------- | --------------------------------------- |
+| Sliding Window     | ✅ Done     | `Problem-Patterns/SlidingWindow/`       |
+| Two Pointers       | 🔄 Ongoing  | `Problem-Patterns/TwoPointers/`         |
+| Backtracking       | Not Started | `Problem-Patterns/Backtracking/`        |
+| Recursion          | Not Started | `Problem-Patterns/Recursion/`           |
+| Fast-Slow Pointers | Not Started | `Problem-Patterns/FastSlowPointers/`    |
+| Prefix Sum         | Not Started | `Problem-Patterns/PrefixSum/`           |
+| Monotonic Stack    | Not Started | `Problem-Patterns/MonotonicStack/`      |
+
+### Interview Problems
+
+| Difficulty | Problems | Status      | Folder                  |
+| ---------- | -------- | ----------- | ----------------------- |
+| Easy       | -        | Not Started | `Interview-Problems/Easy/`   |
+| Medium     | -        | Not Started | `Interview-Problems/Medium/` |
+| Hard       | -        | Not Started | `Interview-Problems/Hard/`   |
 
 ---
 
-# Goal
+## Learning Strategy
 
-* Strong pattern recognition
-* Confident explanation ability
-* Optimal complexity reasoning
-* Interview-ready problem solving
+1. **Master a Data Structure** → Understand its operations and complexity
+2. **Learn Core Algorithms** → Study sorting, searching, and optimization techniques
+3. **Recognize Patterns** → Practice identifying which pattern solves a problem
+4. **Solve Representative Problems** → Apply patterns to real interview problems
+5. **Optimize Under Pressure** → Re-solve with time constraints
+6. **Mock Interviews** → Full problem-solving simulation
+7. **Move Forward** → Only after achieving fluency (90%+ success rate)
+
+---
+
+## Goals
+
+✅ Strong pattern recognition
+✅ Confident explanation ability
+✅ Optimal time/space complexity reasoning
+✅ Interview-ready problem solving
+✅ Code quality and edge case handling

@@ -1,5 +1,5 @@
-@testable import DSA_Swift
 import Testing
+@testable import DSA_Swift
 
 struct NonRepeatingLongestSubstringTests {
   @Test(arguments: [
@@ -9,7 +9,7 @@ struct NonRepeatingLongestSubstringTests {
     ("dvdf", 3),
     ("", nil),
   ])
-  func `Find Length: Standard cases`(input: String, expected: Int?) {
+  func findLengthStandardCases(input: String, expected: Int?) {
     #expect(NonRepeatingLongestSubstring.findLength(input) == expected)
   }
 
@@ -18,14 +18,14 @@ struct NonRepeatingLongestSubstringTests {
     ("bbbbb", "b"),
     ("pwwkew", "wke"),
     ("dvdf", "vdf"),
-    ("", nil)
+    ("", nil),
   ])
-  func `Find Substring: Standard cases`(input: String, expected: String?) {
+  func findSubstringStandardCases(input: String, expected: String?) {
     #expect(NonRepeatingLongestSubstring.findSubString(input) == expected)
   }
 
   @Test
-  func `Handles strings with all unique characters`() {
+  func handlesStringsWithAllUniqueCharacters() {
     let input = "abcdef"
     #expect(NonRepeatingLongestSubstring.findLength(input) == 6)
     #expect(NonRepeatingLongestSubstring.findSubString(input) == "abcdef")

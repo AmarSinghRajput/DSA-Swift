@@ -1,9 +1,9 @@
-@testable import DSA_Swift
 import Testing
+@testable import DSA_Swift
 
 struct InsertionSortTests {
   @Test
-  func `basic case`() {
+  func basicCase() {
     var result = [4, 2, 9, 11, 0, 6, 2, 1, 34]
     InsertionSort.sort(&result)
 
@@ -11,7 +11,7 @@ struct InsertionSortTests {
   }
 
   @Test
-  func `with one element only`() {
+  func withOneElementOnly() {
     var result = [4]
     InsertionSort.sort(&result)
 

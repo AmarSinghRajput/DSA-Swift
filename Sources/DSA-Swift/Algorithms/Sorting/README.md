@@ -1,159 +1,186 @@
-# Sorting
+# Sorting Algorithms
 
-Sorting algorithms arrange elements in ascending or descending order.
-They are fundamental for searching, optimization, and many interview problems.
+Comprehensive implementations of sorting algorithms with detailed explanations and complexity analysis.
 
----
+## Overview
 
-## Bubble Sort
+| Algorithm      | Best   | Average | Worst  | Space   | Stable | In-Place | Status      |
+| -------------- | ------ | ------- | ------ | ------- | ------ | -------- | ----------- |
+| Bubble Sort    | O(n)   | O(n²)   | O(n²)  | O(1)    | Yes    | Yes      | ✅ Complete |
+| Selection Sort | O(n²)  | O(n²)   | O(n²)  | O(1)    | No     | Yes      | ✅ Complete |
+| Insertion Sort | O(n)   | O(n²)   | O(n²)  | O(1)    | Yes    | Yes      | ✅ Complete |
+| Merge Sort     | O(n log n) | O(n log n) | O(n log n) | O(n) | Yes | No | Not Started |
+| Quick Sort     | O(n log n) | O(n log n) | O(n²) | O(log n) | No | Yes | Not Started |
 
-Status: Finished
+## Completed Implementations
 
-### Problem Statement
+### Bubble Sort
+**File**: `BubbleSort/BubbleSort.swift`
 
-Given an integer array, sort it in ascending order using Bubble Sort.
+**How It Works**: Repeatedly steps through the array, compares adjacent elements, and swaps them if they're in wrong order.
 
----
+**Key Characteristics**:
+- Simple to understand and implement
+- Poor performance on large datasets
+- Stable sort (preserves relative order of equal elements)
+- In-place sort (requires minimal extra space)
 
-### Core Idea
+**Best For**: 
+- Educational purposes
+- Nearly sorted arrays
+- Small datasets
 
-Repeatedly compare adjacent elements and swap them if they are in the wrong order.
-
-After every pass:
-- The largest unsorted element moves to its correct position at the end.
-- Continue until no swaps are needed.
-
----
-
-### Intuition Example
-
-Input:
-[5, 3, 8, 4, 2]
-
-Pass 1:
-- Compare 5 & 3 → swap
-- Compare 5 & 8 → no swap
-- Compare 8 & 4 → swap
-- Compare 8 & 2 → swap
-
-Largest element (8) settles at the last index.
-
----
-# Selection Sort
-
-Status: Finished
-
-### Problem Statement
-
-Given an integer array, sort it in ascending order using Selection Sort.
+**Code**:
+```swift
+// See BubbleSort/BubbleSort.swift for implementation
+```
 
 ---
 
-### Core Idea
+### Selection Sort
+**File**: `SelectionSort/SelectionSort.swift`
 
-Repeatedly select the **smallest element from the unsorted portion** of the array and place it at the correct position.
+**How It Works**: Divides array into sorted and unsorted portions. Repeatedly finds minimum element from unsorted portion and places it at beginning.
 
-After every pass:
-- The smallest remaining element moves to the beginning of the unsorted section.
-- The sorted portion grows from **left to right**.
+**Key Characteristics**:
+- Simple implementation
+- O(n) comparisons even in best case
+- Not stable
+- In-place sort
+- Minimizes memory writes (useful for expensive write operations)
 
----
-
-### Intuition Example
-
-Input
-[5, 3, 8, 4, 2]
-
-Pass 1
-Find smallest element in entire array → **2**
-
-Swap with first element
-
-[2, 3, 8, 4, 5]
+**Best For**:
+- When memory writes are expensive
+- Small datasets
+- When O(n²) is acceptable
 
 ---
 
-Pass 2
-Find smallest in remaining array [3, 8, 4, 5] → **3**
+### Insertion Sort
+**File**: `InsertionSort/InsertionSort.swift`
 
-Already in correct position
+**How It Works**: Builds final sorted array one item at a time. Iterates through array and inserts each element into correct position in sorted portion.
 
-[2, 3, 8, 4, 5]
+**Key Characteristics**:
+- Efficient for small arrays
+- Stable sort
+- In-place sort
+- Better performance on nearly sorted data
+- Used internally in Java's `Arrays.sort()` for small subarrays
 
----
-
-Pass 3
-Find smallest in [8, 4, 5] → **4**
-
-Swap with 8
-
-[2, 3, 4, 8, 5]
-
----
-
-Pass 4
-Find smallest in [8, 5] → **5**
-
-Swap
-
-[2, 3, 4, 5, 8]
-
-Array is sorted.
+**Best For**:
+- Small arrays (< 50 elements)
+- Nearly sorted data
+- When stability matters
 
 ---
-# Insertion Sort
 
-### Core Idea
+## Not Started
 
-Build the sorted array one element at a time by picking the next item from the unsorted portion and "inserting" it into its correct position within the already sorted portion.
+### Merge Sort
+**Planned File**: `MergeSort/MergeSort.swift`
 
-After every pass:
+- Divide-and-conquer approach
+- Guaranteed O(n log n) time complexity
+- Stable sort
+- Requires O(n) extra space
+- Great for linked lists and external sorting
 
-The sorted portion (on the left) grows by one.
+### Quick Sort
+**Planned File**: `QuickSort/QuickSort.swift`
 
-All elements to the right of the current "target" that are larger than it are shifted one position to the right to make a hole.
+- Divide-and-conquer approach
+- Average O(n log n), worst O(n²)
+- In-place sort (O(log n) extra space for recursion)
+- Often faster than merge sort in practice
+- Widely used in standard libraries
 
-### Intuition Example
+## How to Use
 
-Input:
-[5, 3, 8, 4, 2]
+### Run Sorting Algorithm
+```swift
+import DSA_Swift
 
-Pass 1 (Target: 3)
+let array = [5, 2, 8, 1, 9]
+BubbleSort.sort(&array)
+print(array) // [1, 2, 5, 8, 9]
+```
 
-Compare 3 with 5.
+### Comparison Operations
+All sorting algorithms support:
+- Default comparison (for Comparable types)
+- Custom comparator functions
 
-5 is larger, so shift 5 right.
+## Complexity Analysis
 
-Insert 3 at the start.
-[3, 5, 8, 4, 2]
+### Time Complexity
+- **Best Case**: When data is already sorted or nearly sorted
+  - Bubble/Insertion: O(n)
+  - Others: O(n log n)
 
-Pass 2 (Target: 8)
+- **Average Case**: Random data
+  - Bubble/Selection/Insertion: O(n²)
+  - Merge/Quick: O(n log n)
 
-Compare 8 with 5.
+- **Worst Case**: Reverse sorted data
+  - Bubble/Selection/Insertion: O(n²)
+  - Quick: O(n²) (with poor pivot)
+  - Merge: O(n log n)
 
-8 is already larger; no shift needed.
-[3, 5, 8, 4, 2]
+### Space Complexity
+- Bubble/Selection/Insertion: O(1) - in-place
+- Merge Sort: O(n) - needs extra space
+- Quick Sort: O(log n) - recursion stack
 
-Pass 3 (Target: 4)
+## Stability
 
-Compare 4 with 8 → Shift 8 right.
+**Stable Sorts** (preserve order of equal elements):
+- Bubble Sort ✅
+- Insertion Sort ✅
+- Merge Sort ✅
 
-Compare 4 with 5 → Shift 5 right.
+**Unstable Sorts** (may change order of equal elements):
+- Selection Sort ❌
+- Quick Sort ❌
 
-Compare 4 with 3 → 3 is smaller; stop.
+## Interview Tips
 
-Insert 4.
-[3, 4, 5, 8, 2]
+1. **Know the Basics**
+   - Understand how each algorithm works
+   - Know time/space complexity
+   - Know when each is appropriate
 
-Pass 4 (Target: 2)
+2. **Implementation**
+   - Can write at least 2-3 from memory
+   - Handle edge cases (empty, single element)
+   - Write clean, readable code
 
-Compare 2 with 8, 5, 4, and 3.
+3. **Comparisons**
+   - Why merge sort over quick sort?
+   - Why insertion sort for small arrays?
+   - When does stability matter?
 
-All are larger; shift all of them right.
+4. **Optimizations**
+   - Hybrid approaches (Tim Sort in Python)
+   - Pivot selection in Quick Sort
+   - Early termination in Bubble Sort
 
-Insert 2 at the beginning.
-[2, 3, 4, 5, 8]
+## Testing
 
-Array is sorted.
+All sorting algorithms are tested in `Tests/DSA-SwiftTests/`:
+- Basic functionality
+- Edge cases (empty, single element, duplicates)
+- Reverse sorted arrays
+- Already sorted arrays
+- Large arrays
 
----
+Run tests:
+```bash
+swift test
+```
+
+## Further Reading
+
+- "Introduction to Algorithms" by CLRS
+- "The Art of Computer Programming" by Knuth
+- LeetCode Sorting Problems

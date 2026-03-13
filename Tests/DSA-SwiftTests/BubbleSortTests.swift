@@ -1,9 +1,9 @@
-@testable import DSA_Swift
 import Testing
+@testable import DSA_Swift
 
 struct BubbleSortTests {
   @Test
-  func `basic case`() {
+  func basicCase() {
     let result = BubbleSort.sort([4, 2, 9, 11, 0, 6, 2, 1, 34])
 
     #expect(result != nil)
@@ -11,14 +11,14 @@ struct BubbleSortTests {
   }
 
   @Test
-  func `empty array`() {
+  func emptyArray() {
     let result = BubbleSort.sort([])
 
     #expect(result == nil)
   }
 
   @Test
-  func `with one element only`() {
+  func withOneElementOnly() {
     let result = BubbleSort.sort([4])
 
     #expect(result == [4])

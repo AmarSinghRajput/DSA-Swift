@@ -1,5 +1,5 @@
-@testable import DSA_Swift
 import Testing
+@testable import DSA_Swift
 
 struct SelectionSortTests {
   @Test
@@ -11,14 +11,14 @@ struct SelectionSortTests {
   }
 
   @Test
-  func `empty array`() {
+  func emptyArray() {
     let result = SelectionSort.sort([])
 
     #expect(result == nil)
   }
 
   @Test
-  func `with one element only`() {
+  func withOneElementOnly() {
     let result = SelectionSort.sort([4])
 
     #expect(result == [4])
